@@ -56,6 +56,7 @@
                 </executions>
                 <configuration>
                     <group>root</group>
+                    <targetOS>centOS</targetOS>
                     <mappings>
                         <mapping>
                             <directoryIncluded>false</directoryIncluded>
