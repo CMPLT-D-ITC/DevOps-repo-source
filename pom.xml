@@ -26,17 +26,62 @@
     </dependencies>
 
     <properties>
+        <finalWarName>GreatFinalWarName</finalWarName>
         <dir>${project.build.directory}</dir>
     </properties>
     <build>
         <finalName>DevOps</finalName>
         <plugins>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.0-beta-2</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <doCheck>false</doCheck>
+                    <doUpdate>false</doUpdate>
+                    <format>{0,number,#}</format>
+                    <items>
+                        <item>buildNumber</item>
+                    </items>
+                    <timestampFormat>{0,date,yyyy-MM-dd HH:mm:ss}</timestampFormat>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
                     <outputDirectory>${dir}</outputDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.1.5</version>
+                <configuration>
+                    <group>Application/Collectors</group>
+                    <release>${buildNumber}</release>
+                    <mappings>
+                        <mapping>
+                            <directoryIncluded>false</directoryIncluded>
+                            <directory>C:/Users/anton_p/Documents/apache-tomcat-9.0.5/webapps</directory>
+                            <username>tomcat</username>
+                            <groupname>tomcat</groupname>
+                            <sources>
+                                <source>
+                                    <location>${project.build.directory}/${finalWarName}.war</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
                 </configuration>
             </plugin>
         </plugins>
