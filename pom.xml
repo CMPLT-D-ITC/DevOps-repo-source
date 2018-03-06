@@ -8,9 +8,6 @@
   <name>DevOps Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-    <properties>
-        <dir>${project.build.directory}</dir>
-    </properties>
     <build>
         <plugins>
             <plugin>
