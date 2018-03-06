@@ -67,23 +67,16 @@
                 <artifactId>rpm-maven-plugin</artifactId>
                 <version>2.1.5</version>
                 <configuration>
-                    <group>Application/Collectors</group>
-                    <release>${buildNumber}</release>
+                    <group>root</group>
                     <mappings>
                         <mapping>
                             <directoryIncluded>false</directoryIncluded>
-                            <directory>C:/Users/anton_p/Documents/apache-tomcat-9.0.5/webapps</directory>
-                            <username>tomcat</username>
-                            <groupname>tomcat</groupname>
-                            <sources>
-                                <source>
-                                    <location>${project.build.directory}/${finalWarName}.war</location>
-                                </source>
-                            </sources>
+                            <directory>/Temp</directory>
                         </mapping>
                     </mappings>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
