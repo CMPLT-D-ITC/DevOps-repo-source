@@ -60,7 +60,7 @@
                     <mappings>
                         <mapping>
                             <directoryIncluded>false</directoryIncluded>
-                            <directory>/Temp</directory>
+                            <directory>/usr/bin/rpm</directory>
                         </mapping>
                     </mappings>
                 </configuration>
