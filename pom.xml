@@ -8,19 +8,18 @@
   <name>DevOps Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-
-
     <properties>
         <dir>${project.build.directory}</dir>
     </properties>
     <build>
-        <finalName>DevOps</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
                 <configuration>
-                    <outputDirectory>${dir}</outputDirectory>
+                    <warName>test-web-app</warName>
+                    <outputDirectory>C:\Temp\project</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
