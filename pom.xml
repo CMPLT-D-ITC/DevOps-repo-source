@@ -35,7 +35,7 @@
     <build>
         <finalName>DevOps</finalName>
         <plugins>
-            <!--<plugin>
+            <plugin>
 
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -43,8 +43,8 @@
                 <configuration>
                     <outputDirectory>${dir}</outputDirectory>
                 </configuration>
-            </plugin>-->
-            <plugin>
+            </plugin>
+           <!-- <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>rpm-maven-plugin</artifactId>
                 <version>2.1.5</version>
@@ -59,29 +59,13 @@
                 <configuration>
                     <group>root</group>
                     <targetOS>centOS</targetOS>
-                    <mappings>
-                        <mapping>
-                            <directory>${app.home}/lib/</directory>
-                            <dependency/>
-                            <artifact/>
-                        </mapping>
-                        <mapping>
-                            <directory>${app.home}/conf</directory>
-                            <configuration>true</configuration>
-                            <sources>
-                                <source>
-                                    <location>${project.build.outputDirectory}/app.properties</location>
-                                    <destination>app.sample.properties</destination>
-                                </source>
-                            </sources>
-                        </mapping>
-                        <mapping>
-                            <directory>${app.home}/logs</directory>
-                        </mapping>
-                    </mappings>
+                    <workingDirectory>${basedir}</workingDirectory>
+                    <arguments>
+                        <argument>-test</argument>
+                    </arguments>
                 </configuration>
             </plugin>
-
+-->
         </plugins>
     </build>
 
