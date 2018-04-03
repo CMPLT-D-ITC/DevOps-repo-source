@@ -11,7 +11,7 @@
     </option>
   </component>
   <component name="OctanePluginConnectionSettings" Url="http://192.168.104.30:8080" SharedSpace="1001" WorkSpace="1009" User="octane@complete.ru" />
-  <component name="OctanePluginState" OPEN_TABS="{&quot;openDetailTabs&quot;:[{&quot;entityType&quot;:&quot;USER_STORY&quot;,&quot;entityName&quot;:&quot;Локализация (SD10310)&quot;,&quot;id&quot;:3229}]}" EXPECTED_COMMIT_MESSAGE="{&quot;value&quot;:&quot;локализ&quot;}" />
+  <component name="OctanePluginState" SELECTED_TAB="{&quot;entityType&quot;:&quot;TASK&quot;,&quot;entityName&quot;:&quot;Fix&quot;,&quot;id&quot;:2048}" OPEN_TABS="{&quot;openDetailTabs&quot;:[{&quot;entityType&quot;:&quot;TASK&quot;,&quot;entityName&quot;:&quot;Fix&quot;,&quot;id&quot;:2048}]}" EXPECTED_COMMIT_MESSAGE="{&quot;value&quot;:&quot;локализ&quot;}" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
